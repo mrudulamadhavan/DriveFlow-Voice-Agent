@@ -14,11 +14,11 @@
  <img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/1d10c3a4-539c-477c-b804-94b436091b3f" />
 
 ### Working Pipeline 
-- Live call: The customer talks through the voice widget embedded in your Streamlit app. The widget opens a WebRTC session straight to the ElevenLabs agent, which handles speech-to-text, the LLM reply and text-to-speech.
+- **Live call** : The customer talks through the voice widget embedded in your Streamlit app. The widget opens a WebRTC session straight to the ElevenLabs agent, which handles speech-to-text, the LLM reply and text-to-speech.
 
-- After the call : When the session disconnects, the widget sends the conversation_id, duration, language and date to your n8n webhook. n8n then fetches the transcript from ElevenLabs, summarises it and sets the sales status, objections and next steps. It writes the result to the Call_History sheet in Google Sheets.
+- **After the call** : When the session disconnects, the widget sends the conversation_id, duration, language and date to your n8n webhook. n8n then fetches the transcript from ElevenLabs, summarises it and sets the sales status, objections and next steps. It writes the result to the Call_History sheet in Google Sheets.
 
-- Dashboard : The Streamlit dashboard / app reads these worksheets to display call history, bookings, and knowledge-base data through the GSheets connection. When you click “Load recording”, it also calls the ElevenLabs audio endpoint using the API key kept in server-side secrets.
+- **Dashboard** : The Streamlit dashboard / app reads these worksheets to display call history, bookings, and knowledge-base data through the GSheets connection. When you click “Load recording”, it also calls the ElevenLabs audio endpoint using the API key kept in server-side secrets.
 
 
 
