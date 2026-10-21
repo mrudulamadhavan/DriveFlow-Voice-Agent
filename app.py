@@ -144,7 +144,7 @@ with col_db:
         st.cache_data.clear()
         st.rerun()
 
-    tab_hist, tab_slots, tab_kb = st.tabs(["📈 Call History", "🗓️ Test-Drive Bookings"])
+    tab_hist, tab_slots, tab_kb = st.tabs(["📈 Call History", "🗓️ Test-Drive Bookings", "📚 Knowledge Base"])
 
     with tab_hist:
         try:
@@ -180,3 +180,11 @@ with col_db:
                          use_container_width=True, hide_index=True)
         except Exception as e:
             st.error(f"Could not read 'Test_Drive_Slots': {e}")
+
+    with tab_kb:
+        st.caption("Grounding facts the agent uses (also uploaded to the ElevenLabs Knowledge Base).")
+        try:
+            st.dataframe(conn.read(worksheet="Knowledge_Base", ttl="1m"),
+                         use_container_width=True, hide_index=True)
+        except Exception as e:
+            st.error(f"Could not read 'Knowledge_Base': {e}")
