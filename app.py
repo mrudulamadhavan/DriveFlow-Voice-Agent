@@ -6,11 +6,7 @@ from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(page_title="DriveFlow AI Voice Sales Bot", page_icon="🚗", layout="wide")
 
-# ---------- Secrets (add these in .streamlit/secrets.toml or Streamlit Cloud > Secrets) ----------
-# ELEVENLABS_AGENT_ID = "agent_xxx"
-# ELEVENLABS_API_KEY  = "sk_xxx"          (used only server-side to fetch recordings)
-# N8N_WEBHOOK_URL     = "https://your-n8n/webhook/call-ended"
-# [connections.gsheets]  ... service account + spreadsheet URL
+
 AGENT_ID = st.secrets.get("ELEVENLABS_AGENT_ID", "")
 EL_KEY = st.secrets.get("ELEVENLABS_API_KEY", "")
 N8N_URL = st.secrets.get("N8N_WEBHOOK_URL", "")
