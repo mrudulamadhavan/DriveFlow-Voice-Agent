@@ -11,7 +11,7 @@
 
 ## Architecture Diagram
 
- <img width="1266" height="738" alt="image" src="https://github.com/user-attachments/assets/1d10c3a4-539c-477c-b804-94b436091b3f" />
+ <img width="800" height="738" alt="image" src="https://github.com/user-attachments/assets/1d10c3a4-539c-477c-b804-94b436091b3f" />
 
 ### Working Pipeline 
 - Live call: The customer talks through the voice widget embedded in your Streamlit app. The widget opens a WebRTC session straight to the ElevenLabs agent, which handles speech-to-text, the LLM reply and text-to-speech.
