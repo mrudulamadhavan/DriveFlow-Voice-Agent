@@ -144,7 +144,7 @@ with col_db:
         st.cache_data.clear()
         st.rerun()
 
-    tab_hist, tab_slots, tab_kb = st.tabs(["📈 Call History", "🗓️ Test-Drive Bookings", "📚 Knowledge Base"])
+    tab_hist, tab_slots, tab_kb = st.tabs(["📈 Call History", "🗓️ Test-Drive Bookings"])
 
     with tab_hist:
         try:
